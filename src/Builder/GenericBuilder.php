@@ -190,6 +190,22 @@ class GenericBuilder implements BuilderInterface
     }
 
     /**
+     * @return array
+     */
+    public function getValuesWithNoColons()
+    {
+        $placeholders = $this->placeholderWriter->get();
+
+        foreach($placeholders as $placeholder => $value) {
+            $placeholders[substr($placeholder, 1)] = $value;
+
+            unset($placeholders[$placeholder]);
+        }
+
+        return $placeholders;
+    }
+
+    /**
      * Returns a SQL string in a readable human-friendly format.
      *
      * @param QueryInterface $query
