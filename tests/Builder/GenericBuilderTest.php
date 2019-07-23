@@ -281,4 +281,6 @@ QUERY;
 
         $this->assertSame($expected, (string) $query);
     }
+
+    //TODO create a test for the new getValuesWithNoColons()
 }
