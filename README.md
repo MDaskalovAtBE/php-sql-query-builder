@@ -1084,6 +1084,9 @@ WHERE
 ```
 
 <a name="block5"></a>
+
+//TODO - Add the new getValuesWithNoColons() which outputs the getValues(); with no colons. 
+
 ## 5. Commenting queries [↑](#index_block)
 The query builder allows adding comments to all query methods by using the `setComment` method.
 
